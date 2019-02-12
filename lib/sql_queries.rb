@@ -19,7 +19,7 @@ def select_youngest_bear_and_returns_name_and_age
 end
 
 def selects_most_prominent_color_and_returns_with_count
-  "SELECT color, COUNT(color) AS color_count FROM bears GROUP BY color"
+  "SELECT color, COUNT(color) AS color_count FROM bears;"
   # "SELECT color, COUNT(color) FROM bears GROUP BY color;" => ["Black", 1], ["Blue", 1], ["Green", 1], ["black", 2], ["darkbrown", 3]
   # "SELECT color, COUNT(color) FROM (SELECT color, COUNT(color) FROM bears GROUP BY color) DESC LIMIT 1" => ["dark brown", 5]
   # "SELECT * FROM (SELECT color, COUNT(color) FROM bears GROUP BY color) DESC LIMIT 1" => ["Black", 1]
