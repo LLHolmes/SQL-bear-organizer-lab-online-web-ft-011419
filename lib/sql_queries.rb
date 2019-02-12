@@ -22,7 +22,7 @@ def selects_most_prominent_color_and_returns_with_count
   # "SELECT color, COUNT(color) FROM bears GROUP BY color;" => ["Black", 1], ["Blue", 1], ["Green", 1], ["black", 2], ["darkbrown", 3]
   # "SELECT color, COUNT(color) FROM (SELECT color, COUNT(color) FROM bears GROUP BY color) DESC LIMIT 1" => ["dark brown", 5]
   # "SELECT * FROM (SELECT color, COUNT(color) FROM bears GROUP BY color) DESC LIMIT 1" => ["Black", 1]
-  "SELECT color, COUNT(color) FROM (SELECT color, COUNT(color) FROM bears DESC GROUP BY color) LIMIT 1"# => ["Black", 1]
+  "SELECT color, COUNT(color) FROM (SELECT color, COUNT(color) FROM bears DESC GROUP BY color) LIMIT 1"# => ["dark brown", 5] * => ["Black", 1]
 end
 
 def counts_number_of_bears_with_goofy_temperaments
